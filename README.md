@@ -15,3 +15,8 @@ based on https://github.com/rexxars/react-markdown and https://github.com/zenoam
 
 3. Start Project with server
    >gulp serve or gulp serve --prod
+
+# todo list
+1. markdown support
+2. add demo
+3. add usage and example
