@@ -69,7 +69,7 @@
     "imports-loader": "^0.6.5",
     "modernizr-webpack-plugin": "^1.0.5",
     "node-sass": "^3.8.0",
-    "react-hot-loader": "^3.0.0-beta.5",
+    "react-hot-loader": "^3.0.0-beta.7",
     "redux-devtools": "^3.3.1",
     "redux-devtools-chart-monitor": "^1.4.2",
     "redux-devtools-diff-monitor": "^5.0.5",

@@ -25,4 +25,4 @@ export default class HtmlEditor extends React.Component {
             </ContentWrapper>
         )
     }
-}
+} 

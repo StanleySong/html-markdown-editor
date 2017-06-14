@@ -40,7 +40,7 @@ var paths = {
     dist: 'dist/',
     markup: 'jade/',
     styles: 'sass/',
-    scripts: 'jsx/'
+    scripts: 'js/'
 }
 
 // if sass -> switch to sass folder
@@ -228,7 +228,7 @@ gulp.task('browsersync', function() {
     }
 
     browserSync({
-        notify: false,
+        notify: true,
         server: {
             baseDir: paths.dist,
             middleware: middlewares
