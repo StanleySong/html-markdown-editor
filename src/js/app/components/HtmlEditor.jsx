@@ -18,20 +18,22 @@ export default class HtmlEditor extends React.Component {
                 'header', 'font', 'size',
                 'background', 'color', 'code', 'script','code-block',
                 'bold', 'italic', 'underline', 'strike', 'blockquote',
-                'list', 'bullet', 'indent',
+                'list', 'bullet', 'indent', 'align',
                 'link', 'image', 'video', 'formula'
             ],
             modules: {
                 toolbar: [
-                    [{ 'header': [1, 2, false] }, { 'font': [] }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{ 'color': [] }, { 'background': [] }],
+                    [{ 'font': [] }],
+                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                    ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+                    [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+                    [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+                    [{ 'align': [] }],
                     ['blockquote', 'code-block'],
-                    [{'list': 'ordered'}, {'list': 'bullet'}, 
-                    { 'direction': 'rtl' },
-                    { 'align': [] },
-                    {'indent': '-1'}, {'indent': '+1'}],
-                    ['link', 'image', 'video'],
+                    [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                    [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+                    [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+                    [{ 'direction': 'rtl' }],                         // text direction
                     ['clean']
                 ]
             }
