@@ -27,8 +27,7 @@ class HeaderHorizontal extends React.Component {
                 <Header className="header">
                     <Row>
                         <Col span={12} offset={6}>
-                            <Tag className="km-tag" onClick={function(){ }.bind(this)}>HTML</Tag>
-                            <Tag className="km-tag" onClick={function(){ }.bind(this)}>MARKDOWN</Tag>
+                            <Tag className="km-tag" onClick={function(){ }.bind(this)}>HTML Editor</Tag>
                             <a target="_blank" className="ant-tag km-tag ant-tag-text" rel="noopener noreferrer" href="https://github.com/StanleySong/react-html-markdown-editor">Github</a>
                         </Col>
                     </Row>
