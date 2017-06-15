@@ -1,7 +1,7 @@
 # react-html-markdown-editor
 (under developing)
 Provide a component for build a html/markdown editor using react
-based on https://github.com/rexxars/react-markdown and https://github.com/zenoamaro/react-quill
+based on react-froala-editor
 
 # setup
 1. install tools
