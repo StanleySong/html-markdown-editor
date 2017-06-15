@@ -1,14 +1,31 @@
 .contents {
   position: relative;
   margin-top: $header-height;
+  background: #fff;
 }
 
-.my-editing-area {
-  position: relative;
-  min-height: 200px
+.fr-desktop,
+.fr-toolbar,
+.fr-view {
+  background: #fff !important;
 }
 
-.tool-bar {
-  padding: 0.55em;
+.fr-element {
+  position: relative !important;
+  min-height: 600px !important;
+}
+
+.fr-toolbar {
+  border-top: 0 !important;
+}
+
+.toolbar {
+  padding: 2.03em;
+  box-shadow: 1px 1px #bbbbbb;
   border-bottom: 1px solid #cccccc;
+}
+
+.generate {
+  background: #ff0000;
+  margin-right: 10px;
 }

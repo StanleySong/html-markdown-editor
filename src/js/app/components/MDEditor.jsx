@@ -3,25 +3,72 @@
  */
 
 import React from 'react';
-import ReactQuill from 'react-markdown';
+import FroalaEditor from 'react-froala-editor';
 import ContentWrapper from './ContentWrapper';
+import {Row, Col, Button} from 'antd';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 export default class MDEditor extends React.Component {
     constructor(props) {
-    super(props)
-    this.state = { text: '' }
+        super(props)
+        this.state = 
+            { 
+                text: '', 
+                code: '',
+            }
     }
 
-    handleChange(value) {
-        this.setState({ text: value })
+    getData() {
+        let value = this.froalaEditor.getHtml(true);
+        this.setState({code: value});
     }
 
     render() {
-        var input = '# This is a header\n\nAnd this is a paragraph';
-
+                console.log(this.state.text);
         return (
             <ContentWrapper>
-                <ReactMarkdown source={input} />
+                <Row>
+                    <Col span={12}>
+                        <FroalaEditor 
+                            base='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.1'
+                            alignP={true}
+                            codeBeautifierP={true}
+                            colorsP={true}
+                            draggableP={true}
+                            codeViewP={true}
+                            tableP={true}
+                            fontFamilyP={true}
+                            fontSizeP={true}
+                            imageP={true}
+                            linkP={true}
+                            listsP={true}
+                            inlineStyleP={true}
+                            lineBreakerP={true}
+                            fileP={true}
+                            entitiesP={true}
+                            emoticonsP={true}
+                            paragraphFormatP={true}
+                            paragraphStyleP={true}
+                            quickInsertP={true}
+                            quoteP={true}
+                            saveP={true}
+                            urlP={true}
+                            videoP={true}
+                            value={this.state.text} 
+                            ref={(r) => {this.froalaEditor = r;}}
+                        />
+                    </Col>
+                    <Col span={12}>
+                        <div className="toolbar">
+                            <Button type="primary" className="generate" onClick={this.getData.bind(this)}>Generate Html</Button>
+                            <CopyToClipboard text={this.state.code}
+                                onCopy={() => this.setState({copied: true})}>
+                                <Button type="primary">Copy To Clipboard</Button>
+                            </CopyToClipboard>
+                        </div>
+                        {this.state.code}
+                    </Col>
+                </Row>
             </ContentWrapper>
             
         )
